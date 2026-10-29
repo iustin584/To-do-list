@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Jost", sans-serif;
+ display: flex;
+ justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(./imagini/fundal2.avif)no-repeat center center/cover;
+
+}
+.container{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 100%;
+padding: 0 20px;
+}
+.todo-list{
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap : 30px;
+    color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.507);
+    border: 3px solid rgba(25, 21, 37, 0.151);
+    backdrop-filter: blur(10px);
+}
+.todo-list h1{
+
+    font-size: 2rem;
+}
+.input-area{
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+}
+.input-area input{
+    flex: 1;
+    padding: 10px 17px;
+    border: none;
+    border-radius: 22px;
+    font-size: 1.1rem;
+    outline: none;
+    background-color: rgba(16, 35, 121, 0.521);
+    color: rgb(255, 255, 255);
+}
+.input-area input::placeholder{
+    color: rgba(180, 173, 173, 0.616);
+}
+.input-area button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    padding:  8px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.1rem;
+    background-color: rgba(19, 73, 122, 0.568);
+border: 2px solid rgba(46, 125, 161, 0.199);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.input-area button:hover{
+    transform: scale(1,1);
+    background: #396fc0;
+}
+.container-sarcini{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#task-list{
+    
+    width: 100%;
+}
+#task-list li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #27367ac9;
+    margin-bottom: 10px;
+    padding: 8px 10px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    color: #fff;
+    position: relative;
+    transition: box-shadow 0.2s ease;
+}
+#task-list li:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.527);
+}
+
+#task-list li .checkbox{
+    min-width: 20px;
+    height: 20px;
+    border: 2px solid #ffffff8e;
+    background-color: rgba(78, 159, 206, 0.856);
+    background: transparent;
+    border-radius: 50%;
+    appearance: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+#task-list li .checkbox:checked{
+    background: #13f007f6;
+    transform: scale(1.1);
+}
+#task-list li .checkedbox:checked::before{
+    font-family: "Jost", sans-serif;
+    content:'✓';
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
+#task-list li span{
+    flex : 1;
+    margin-left: 10px;
+    word-wrap: break-word;
+
+}
+#task-list li.completed span {
+    text-decoration: 2px line-through #000;
+    color: #000;
+}
+
+
+.task-buttons{
+    display: flex;
+    gap: 10px;
+    margin-right: auto;
+}
+.task-buttons button{
+    background: rgba(47, 94, 156, 0.514);
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.task-buttons button:hover{
+    transform: scale(1.2);
+}
+.task-buttons .edit-btn{
+    background: rgb(255, 232, 26);
+}
+.task-buttons .delete-btn{
+    background: rgb(247, 18, 18);
+}
+.stat-container{
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.205);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+.details {
+    width: 100%;
+    backdrop-filter: blur(12px);
+    
+}
+.details h3{
+    text-align: center;
+    color: #fff;
+}
+#progressbar{
+    width: 100%;
+    height: 7px;
+    background: hsla(194, 93%, 43%, 0.555);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    position: relative;
+    margin-top: 15px;
+}
+#progress{
+    width: 50%;
+    height: 100%;
+    background: #00ff40;
+    border-radius: 20px;
+    transition: width 0.3s ease;
+}
+#numbers{
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: rgb(10, 50, 102);
+    border: 2px solid rgba(66, 152, 223, 0.205);
+    font-weight: bold;
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+.emptyImage{
+    scale: 0.65;
+ 
+}
+@media (max-width: 600px){
+    .container{
+        margin: 0 20px;
+        padding: 0 10px;
+
+    }
+    .todo-list{
+        padding: 1.5rem;
+        gap: 20px;
+    }
+    #numbers{
+        width: 60px;
+        height: 60px;
+        font-size: 1rem;
+    }
+    .input-area input{
+        font-size: 1rem;
+    }
+    #task-list li{
+        font-size: 1rem;
+    }
+}
